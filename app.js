@@ -25,6 +25,9 @@ app.get('/', function(req, res) {
 	title: "Jesse Huang",
 	pageTitle: "Jesse Huang"    
     });
+    res.on('connection', function(socket) {
+	socket.setTimeout(10000);
+    });
 });
 
 
