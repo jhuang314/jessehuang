@@ -4,6 +4,7 @@ var http = require('http');
 var app = express();
 //var routes = require('./routes');
 var path = require('path');
+var keepAliveAgent = require('./agent.js');
 
 // Configuration
 app.set('port', process.env.PORT || 3000);
@@ -53,6 +54,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 function startKeepAlive() {
     setInterval(function() {
         var options = {
+	    agent: new keepAliveAgent({ maxSockets: 1000 }),
 	    host: 'jessehuang.herokuapp.com',
 	    port: 80,
 	    path: '/'
