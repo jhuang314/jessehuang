@@ -20,6 +20,10 @@ html(lang="en")
     |     <link rel="stylesheet" href="/stylesheets/layouts/blog.css">
     | <!--<![endif]-->
 
+
+  body
+    block content
+
     script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
     script(type='text/javascript').
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,10 +32,6 @@ html(lang="en")
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-48713710-1', 'jessehuang.com');
       ga('send', 'pageview');
-
-  body
-    block content
-
     script(src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js")
     script.
       YUI().use('node-base', 'node-event-delegate', function (Y) {

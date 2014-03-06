@@ -37,14 +37,14 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 
 // Content unrelated stuff goes here:
-var NA = require("nodealytics");
-NA.initialize('UA-48713710-1', 'jessehuang.com', function () {
-    NA.trackPage('utmdt=Jesse%20Huang', 'pageName', function (err, resp) {
-	if (!err, resp.statusCode === 200) {
-	    console.log('Analytics Worked!');
-	}
-    });
-});
+// var NA = require("nodealytics");
+// NA.initialize('UA-48713710-1', 'jessehuang.com', function () {
+//     NA.trackPage('utmdt=Jesse%20Huang', 'pageName', function (err, resp) {
+// 	if (!err, resp.statusCode === 200) {
+// 	    console.log('Analytics Worked!');
+// 	}
+//     });
+// });
 
 
 function startKeepAlive() {
