@@ -6,6 +6,26 @@ html(lang="en")
     title= title
     link(href="/images/favicon.png", rel="shortcut icon")
     link(rel="stylesheet", href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css")
+    link(rel='stylesheet', href='/stylesheets/pure-min.css')
+
+    | <!--[if lte IE 8]>
+    |     <link rel="stylesheet" href="/stylesheets/main-grid-old-ie.css">
+    | <![endif]-->
+    | <!--[if gt IE 8]><!-->
+    |     <link rel="stylesheet" href="/stylesheets/main-grid.css">
+    | <!--<![endif]-->
+    | 
+    | 
+    | 
+    | <!--[if lte IE 8]>
+    |     <link rel="stylesheet" href="/stylesheets/layouts/blog-old-ie.css">
+    | <![endif]-->
+    | <!--[if gt IE 8]><!-->
+    |     <link rel="stylesheet" href="/stylesheets/layouts/blog.css">
+    | <!--<![endif]-->
+
+
+    //link(rel="stylesheet", href="http://bilalquadri.com/css/main.css")
     //link(rel='stylesheet', href='/stylesheets/pure-min.css')
     script(type='text/javascript', src='/javascripts/jquery-1.11.0.min.js')
     script(type='text/javascript').
@@ -13,7 +33,6 @@ html(lang="en")
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-48713710-1', 'jessehuang.com');
       ga('send', 'pageview');
 
