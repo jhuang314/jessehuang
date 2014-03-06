@@ -10,6 +10,16 @@ app.listen(port, function () {
     console.log("listening on " + port);
 });
 
+var NA = require("nodealytics");
+NA.initialize('UA-48713710-1', 'jessehuang.com', function () {
+  NA.trackPage('utmdt=Jesse%20Huang', 'pageName', function (err, resp) {
+    if (!err, resp.statusCode === 200) {
+      console.log('Analytics Worked!');
+    }
+  });
+});
+
+
 function startKeepAlive() {
     setInterval(function() {
         var options = {
@@ -33,3 +43,4 @@ function startKeepAlive() {
 }
 
 startKeepAlive();
+

@@ -1,23 +1,24 @@
 {
-  "name": "jessehuang",
-  "version": "0.0.0",
-  "description": "My Website",
-  "main": "app.js",
-  "scripts": {
-    "test": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github.com:jhuang314/jessehuang.git"
-  },
-  "author": "Jesse Huang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jhuang314/jessehuang/issues"
-  },
-  "homepage": "https://github.com/jhuang314/jessehuang",
-  "dependencies": {
-    "logfmt": "^0.21.0",
-    "express": "^4.0.0-rc2"
-  }
+    "name": "jessehuang",
+    "version": "0.0.0",
+    "description": "My Website",
+    "main": "app.js",
+    "scripts": {
+	"test": "node app.js"
+    },
+    "repository": {
+	"type": "git",
+	"url": "github.com:jhuang314/jessehuang.git"
+    },
+    "author": "Jesse Huang",
+    "license": "MIT",
+    "bugs": {
+	"url": "https://github.com/jhuang314/jessehuang/issues"
+    },
+    "homepage": "https://github.com/jhuang314/jessehuang",
+    "dependencies": {
+	"logfmt": "^0.21.0",
+	"express": "^4.0.0-rc2",
+	"nodealytics": ""
+    }
 }
