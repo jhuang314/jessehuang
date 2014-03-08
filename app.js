@@ -1,15 +1,28 @@
 // Modules
-var express = require('express');
-var http = require('http');
-var app = express();
-//var routes = require('./routes');
-var path = require('path');
+var express = require('express')
+, http = require('http')
+, app = express()
+, path = require('path')
+, Poet = require('poet')
+;
+
+
+// get Poet up and running
+var poet = Poet(app, {
+    posts: './_posts/',
+    postsPerPage: 5,
+    metaFormat: 'json',
+    routes: {
+	'/post/:post' : 'post'
+    }
+});
 
 // Configuration
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
+app.use(app.router);
 
 var env = process.env.NODE_ENV || 'development';
 
@@ -18,10 +31,13 @@ if ('development' == env) {
     app.locals.pretty=true;
 }
 
+poet.init().then(function () {
+    
+});
 
 // Routes
 app.get('/', function(req, res) {
-    res.render('index.jade', {
+    res.render('index', {
 	title: "Jesse Huang",
 	pageTitle: "Jesse Huang"    
     });
@@ -52,23 +68,23 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 function startKeepAlive() {
     setInterval(function() {
-        var options = {
+	var options = {
 	    host: 'jessehuang.herokuapp.com',
 	    port: 80,
 	    path: '/'
-        };
-        http.get(options, function(res) {
+	};
+	http.get(options, function(res) {
 	    res.on('data', function(chunk) {
-                try {
+		try {
 		    // optional logging... disable after it's working
 		    console.log("HEROKU RESPONSE: " + chunk);
-                } catch (err) {
+		} catch (err) {
 		    console.log(err.message);
-                }
+		}
 	    });
-        }).on('error', function(err) {
+	}).on('error', function(err) {
 	    console.log("Error: " + err.message);
-        });
+	});
     }, 20 * 60 * 1000); // load every 20 minutes
 }
 

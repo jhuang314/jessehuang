@@ -18,8 +18,9 @@
     "homepage": "https://github.com/jhuang314/jessehuang",
     "dependencies": {
 	"logfmt": "*",
-	"express": "*",
+	"express": ">= 3.0.0rc5",
 	"nodealytics": "*",
-	"jade": "*"
+	"jade": "*",
+	"poet": "*"
     }
 }
