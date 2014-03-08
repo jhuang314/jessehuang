@@ -27,7 +27,7 @@ app.use(app.router);
 var env = process.env.NODE_ENV || 'development';
 
 // development only
-if ('development' == env) {
+if ('development' == env || true) {
     app.locals.pretty=true;
 }
 
@@ -37,7 +37,7 @@ poet.init().then(function () {
 
 // Routes
 app.get('/', function(req, res) {
-    res.render('index', {
+    res.render('index.jade', {
 	title: "Jesse Huang",
 	pageTitle: "Jesse Huang"    
     });
