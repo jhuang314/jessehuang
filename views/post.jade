@@ -10,8 +10,9 @@ block content
       p.post-meta
         small.content-subhead #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
         - each tag in post.tags
-          a(href=tagUrl(tag), class='post-category post-category-design')
-            span.label.label-info #{tag}
+          a(href=tagUrl(tag), class='post-category post-category-#{tag}').
+            #{tag}
     .post.description
       != post.content
+
 

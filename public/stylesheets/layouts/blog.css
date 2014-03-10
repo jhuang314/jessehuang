@@ -25,6 +25,8 @@ h3{font-weight:100;}
 .post-meta{color:#999;font-size:90%;margin:0;}
 .post-category{margin:0 0.1em;padding:0.3em 1em;color:#fff;background:#999;font-size:80%;}
 .post-category-design{background:#5aba59;}
+.post-category-html{background:#5aba59;}
+.post-category-emacs{background:#8156a7;}
 .post-category-pure{background:#4d85d1;}
 .post-category-yui{background:#8156a7;}
 .post-category-js{background:#df2d4f;}
