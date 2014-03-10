@@ -1,0 +1,11 @@
+ul.pure-paginator
+  - var i = 1;
+  - var pageCount = getPageCount();
+  - while ( i <= pageCount )
+    if page == i
+      li
+        a(class='pure-button pure-button-active', href=pageURL(i)) #{i}
+    else
+      li
+        a(class='pure-button', href=pageURL(i)) #{i}
+    - i++;
