@@ -56,7 +56,7 @@ app.get('/blog', function(req, res) {
     res.render('blog');
 });
 
-poet.addRoute('/blog/mypost/:post', function (req, res) {
+poet.addRoute('/blog/posts/:post', function (req, res) {
     var post = poet.helpers.getPost(req.params.post);
     if (post) {
 	res.render('post', { post: post }); 
